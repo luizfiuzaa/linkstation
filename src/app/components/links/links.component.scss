@@ -1,0 +1,12 @@
+.made_with {
+  cursor: pointer;
+  padding-top: 3%;
+}
+
+.made_with:hover {
+  cursor: pointer;
+  .love {
+    transition: 0.3s ease-in-out;
+    color: var(--ion-color-danger);
+  }
+}

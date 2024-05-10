@@ -1,0 +1,13 @@
+.easter_egg {
+  transition: 0.3s;
+  cursor: pointer;
+  color: #fdfdfd00;
+  font-family: monospace;
+}
+
+.easter_egg:hover {
+  .easter_egg__false {
+    color: var(--ion-color-danger);
+  }
+  color: var(--ion-color-medium);
+}

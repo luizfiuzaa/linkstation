@@ -1,41 +1,14 @@
 <ion-row class="ion-justify-content-center">
   <ion-col size="11" size-md="4" size-sm="11" class="ion-text-center">
-    <ion-button
-      href="https://www.linkedin.com/in/luiz-fiuza-/"
-      target="_blank"
-      color="primary"
-      size="large"
-      expand="block"
-    >
-      <ion-icon slot="start" name="logo-linkedin"></ion-icon>
-      <ion-text>Linkedin</ion-text>
-    </ion-button>
 
-    <ion-button
-      href="https://github.com/luizfiuzaa"
-      target="_blank"
-      color="dark"
-      size="large"
-      expand="block"
-    >
-      <ion-icon slot="start" name="logo-github"></ion-icon>
-      <ion-text>Github</ion-text>
-    </ion-button>
 
-    <ion-button
-      href="mailto:luizfiuza.b@gmail.com"
-      color="danger"
-      size="large"
-      expand="block"
-    >
-      <ion-icon slot="start" name="mail"></ion-icon>
-      <ion-text>Email</ion-text>
-    </ion-button>
-
-    <ion-button fill="clear" color="medium" size="small" expand="block">
-      <ion-icon slot="start" name="code"></ion-icon>
-      <ion-text>More Soon...</ion-text>
-    </ion-button>
+    <ng-container *ngFor="let link of this.links">
+      <ion-button href="{{ link.uri }}" target="_blank" color="{{ link.color }}" size="large"
+        expand="block">
+        <ion-icon slot="start" name="{{ link.icon }}"></ion-icon>
+        <ion-text>{{ link.name }}</ion-text>
+      </ion-button>
+    </ng-container>
 
     <div class="made_with">
       <span>Made with</span><span class="love"> ❤︎ </span><span>by Luiz Fiuza</span>
